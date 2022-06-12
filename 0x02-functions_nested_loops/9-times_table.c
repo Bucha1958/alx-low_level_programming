@@ -3,7 +3,7 @@
  * times_table - times table function
  *
  */
-void times_table(void
+void times_table(void)
 {
 	int i;
 	int j;
