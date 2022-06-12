@@ -1,10 +1,15 @@
 #include "main.h"
 #include "6-abs.c"
 #include <stdio.h>
+/**
+ * print_to_98 - it prints n to 98
+ *
+ * @n : the only parameter
+ */
 void print_to_98(int n)
 {
 	int i;
-	
+
 	if (n > 98)
 	{
 		for (i = n; i >= 98; i--)
@@ -17,9 +22,8 @@ void print_to_98(int n)
 		}
 	} else
 	{
-		
 		for (i = n; i <= 98; i++)
-		{
+{
 			printf("%d", i);
 			if (i != 98)
 			{
