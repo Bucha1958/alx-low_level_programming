@@ -8,5 +8,11 @@
  * Return: char value of s
  */
 char *_memset(char *s, char b, unsigned int n);
-
+/**
+ *  _memcpy - function that copies memory byte n from memory area src to memory area dest
+ * @dest : memory area dest
+ * @src : memory area src
+ * @n : n amount of times
+ */
+char *_memcpy(char *dest, char *src, unsigned int n);
 #endif
