@@ -1,14 +1,18 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * main - function that print a string
+ * _puts_recursion - recursion function
  *
- * Return : always return 0
+ * @s : variable to recurse through
+ *
  *
  */
-int main(void)
+void _puts_recursion(char *s)
 {
-	puts("Printnew");
-	puts('\n');
-	return (0);
+	if (*s)
+	{
+		_putchar(*s);
+		_puts_recursion(s + 1);
+	} else
+		_putchar('\n');
 }
