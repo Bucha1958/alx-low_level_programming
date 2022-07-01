@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int multi = 1;
-	int i, j;
+	int i;
 
 	if (argc == 3)
 	{
