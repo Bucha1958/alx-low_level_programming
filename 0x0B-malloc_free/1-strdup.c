@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "main.h"
+/**
+ * _strdup - Function that returns a pointer to a duplicate string
+ *
+ * @str : copy of a string given as a parameter
+ *
+ * Return : it returns a pointer when successful
+ */
+char *_strdup(char *str)
+{
+	char *array = (char *)malloc(12);
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	if (array == strdup(str))
+	{
+		return (array);
+	}
+	else
+	{
+		return (NULL);
+	}
+	free(array);
+}
