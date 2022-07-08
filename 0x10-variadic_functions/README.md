@@ -1,1 +1,1 @@
-Variadic function is a function that takes series of variable arguments 
+Variadic functions

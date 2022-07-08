@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "variadic_functions.h"
 /**
  * sum_them_all - Function that takes indefinite number of variable arguments
