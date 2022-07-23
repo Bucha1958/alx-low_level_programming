@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * 
- * main - Function that checkes whether an integar is positive or negative 
+ * main - Function that checkes whether an integar is positive or negative
  *
  * Return : Always returns 0
  *
