@@ -1,0 +1,16 @@
+#include "main.h"
+/**
+ *
+ *
+ *
+ */
+int main(void)
+{
+	int a = 10;
+	int b = 402;
+	int c = 10;
+	int i = largest_number(a, b, c);
+
+	printf("%d is the largest\n", i);
+	return (0);
+}
