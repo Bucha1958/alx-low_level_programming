@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 /**
  * pop_listint - pops a node out
  * @head: linked list address
