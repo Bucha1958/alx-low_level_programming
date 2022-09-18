@@ -1,58 +1,41 @@
-int length(char *str, int len);
-int check(char *s, int len, int counter, int half);
+#include "main.h"
 
 /**
- * is_palindrome - Check if string is a palindrome
+ * is_palindrome - Wrapper function to check for palindrome
  * @s : String
+ * @i: integar pointing the beginning
+ * @j: integar pointing the end.
  * Return : 1 if palindrome 0 if not palindrome
+ */
+int ispalindrome(char *s, int i, int j)
+{
+	if (i == j)
+		return (1);
+	else if (s[i] != s[j])
+		return (0);
+	if (i < j)
+		return (ispalindrome(s, i + 1, j - 1));
+       return (1);	
+}
+/**
+ * is_palindrome - Checks if string is a palindrome
+ * @s : String
+ * Return : 1 if palindrome 0 if not
  */
 int is_palindrome(char *s)
 {
-	int len;
-	int counter;
-	int half;
-
-	if (*s == '\0')
+	if (!*s)
 		return (1);
-	len = 0;
-	counter = 0;
-
-	len = length(s, len);
-	half = len / 2;
-	len = checks(s, len, counter, half);
-	return (len);
+	return (ispalindrome(s, 0, _strlen_recursion(s) - 1));
 }
 /**
- * check - Checks if string is a palindrome
- * @s : String
- * @len : length of string
- * @counter : initial counter
- * @half : Contains the half of the length
- * Return: 1 if palindrome 0 if not palindrome
- */
-int check(char *s, int len, int counter, int half)
-{
-	/*Not a palindrome*/
-	if (s[counter] != s[len - 1])
-		return (0);
-	/*It is a palindrome*/
-	if (counter == half)
-		return (1);
-	counter++;
-	len--;
-	return (check(s, len, counter, half));
-}
-/**
- * Length - Calculates the length of the string
- * @str : String to calculate the length
- * @len : The initial length
+ * _strlen_recursion - Calculates the length of the string
+ * @s : string
  * Return : The total length of the function
  */
-int length(char *str, int len)
+int _strlen_recursion(char *s)
 {
-	if (*str == '\0')
-		return (len);
-	str++;
-	len++;
-	return (length(str, len));
+	if (*s == '\0')
+		return (0);
+	return (1 + _strlen_recursion(s + 1));
 }
