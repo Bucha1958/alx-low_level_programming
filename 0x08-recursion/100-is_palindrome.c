@@ -1,4 +1,3 @@
-#include "main.h"
 int length(char *str, int len);
 int check(char *s, int len, int counter, int half);
 
