@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "main.h"
 /**
  * _strdup - Function that returns a pointer to a duplicate string
@@ -11,26 +10,23 @@
  */
 char *_strdup(char *str)
 {
-	int i, c = 0;
-	char *array;
+	char *copy;
+	unsigned int i;
 
-	while (str[c] != '\0')
-	{
-		str[c];
-		c++;
-	}
-	array = malloc(sizeof(char) * ()()s())
 	if (str == NULL)
-	{
 		return (NULL);
-	}
-	if (array == strdup(str))
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		return (array);
+	
 	}
-	else
-	{
+	i++;
+	copy = malloc(sizeof(char) * i);
+	if (copy == NULL)
 		return (NULL);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		copy[i] = str[i];
 	}
-	free(array);
+	copy[i] = '\0';
+	return (copy);
 }
