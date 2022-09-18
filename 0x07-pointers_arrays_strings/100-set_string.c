@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
  * set_string - Moves a pointer to a string
  *
