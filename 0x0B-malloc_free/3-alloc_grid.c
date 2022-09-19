@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "main.h"
 /**
  * alloc_grid - Function to return a pointer to a 2D array.
  * @width: Number of columns
