@@ -1,6 +1,5 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "lists.h"
+
 /**
  * get_nodeint_at_index - Get node index
  * @head: head
