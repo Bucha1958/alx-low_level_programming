@@ -9,7 +9,6 @@
 int main(void)
 {
 	dlistint_t *head;
-	int n;
 
 	head = NULL;
 	add_dnodeint_end(&head, 0);
@@ -21,8 +20,10 @@ int main(void)
 	add_dnodeint_end(&head, 402);
 	add_dnodeint_end(&head, 1024);
 	print_dlistint(head);
-	n = sum_dlistint(head);
-	printf("%d\n", n);
+	printf("-------------------\n");
+	insert_dnodeint_at_index(&head, 9, 4096);
+	print_dlistint(head);
+	head = NULL;
 
 
 	return (EXIT_SUCCESS);
