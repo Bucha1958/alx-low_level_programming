@@ -8,7 +8,7 @@ int main()
 	listint_t *head;
 	int i;
 	//listint_t *head2;
-	//listint_t *node;
+	listint_t *node;
 
 	head = NULL;
 
@@ -21,6 +21,8 @@ int main()
 	add_nodeint(&head, 402);
 	add_nodeint_end(&head, 1024);
 	print_listint(head);
+	node = get_nodeint_at_index(head, 4);
+	printf("\t%d\n", node);
 	i = pop_listint(&head);
 	printf("--------------------\n");
 	printf("\t - %d\n", i);
