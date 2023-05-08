@@ -1,0 +1,34 @@
+#include "search_algos.h"
+#include <stdio.h>
+#include <string.h>
+
+
+
+/**
+ * linear_search - Search function
+ *
+ * @array: first parameter that will contain elements
+ * @size: Second parameter
+ * @value: Third parameter
+ *
+ */
+int linear_search(int *array, size_t size, int value)
+{
+  int i;
+
+  if (array == NULL)
+    return (-1);
+
+  for (i = 0; i < size; i++)
+  {
+
+    printf("Value checked array[%d] = [%d]\n", i, ar\
+ray[i]);
+    if (value == array[i])
+    {
+      return (i);
+    }
+
+  }
+  return (-1);
+}
