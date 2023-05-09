@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+
 /**
  * linear_search - Search function
  *

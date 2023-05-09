@@ -11,9 +11,9 @@ void print_array(int array[], int size);
 
 int binary_search(int *array, size_t size, int value)
 {
-	int left = 0; 
-	int right = size - 1; 
-	int mid;
+	size_t left = 0; 
+	size_t right = size - 1; 
+	size_t mid;
 	
 	if (array == NULL)
 		return (-1);
@@ -35,19 +35,17 @@ int binary_search(int *array, size_t size, int value)
 	return (-1);
 }
 
-void print_array(int array[], int size)
+void print_array(int array[], size_t size)
 {
-	int i;
+	size_t i;
 
 	for (i = 0; i < size; i++)
 	{
-		printf("%d", array[i]);
+		printf("%lu", array[i]);
 		if (i < size - 1)
 		{
 			printf(", ");
-
 		}
-
 	}
 	printf("\n");
 }
