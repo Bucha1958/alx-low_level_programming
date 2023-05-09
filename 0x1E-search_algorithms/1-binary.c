@@ -1,5 +1,5 @@
 #include "search_algos.h"
-void print_array(int array[], size_t size);
+void print_array(int array[], size_t start, size_t stop);
 /**
  * binary_search - Function that searches for element in sorted array
  * @array: First parameter passed
@@ -17,32 +17,34 @@ int binary_search(int *array, size_t size, int value)
 	
 	if (array == NULL)
 		return (-1);
-	print_array(array, size);
-	while (left < right)
+
+	while (left <= right)
 	{
 		
 		mid = (left + right) / 2;
-		if (array[mid] < value)
+		printf("Searching in array: ");
+		print_array(array, left, right);
+
+		if (array[mid] == value)
 		{
-			left = mid + 1;
+			return (mid);
 		}
 		else if (array[mid] > value)
 			right = mid - 1;
 		else
-			return (mid);
-		print_array(array + left, right - left + 1);
+			left = mid + 1;
 	}
 	return (-1);
 }
 
-void print_array(int array[], size_t size)
+void print_array(int array[], size_t start, size_t stop)
 {
-	int i;
-
-	for (i = 0; i < size; i++)
+	size_t i;
+	
+	for (i = start; i <= stop; i++)
 	{
 		printf("%u", array[i]);
-		if (i < size - 1)
+		if (i < stop)
 		{
 			printf(", ");
 		}
