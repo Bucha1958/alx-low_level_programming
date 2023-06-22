@@ -1,42 +1,40 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "main.h"
-/**
- * alloc_grid - Function to return a pointer to a 2D array.
- * @width: Number of columns
- * @heigth: Number of flies
- * Return : pointer.
- */
-int **alloc_grid(int width, int height)
-{
-	int i, j, row, column;
-	int **p;
 
-	if (width <= 0 || height <= 0)
-	{
-		return (NULL);
-	}
-	p = malloc(height * sizeof(int *));
-	if (p == 0)
-	{
-		free(p);
-		return (NULL);
-	}
-	for (i = 0; i < height; i++)
-	{
-		p[i] = malloc(width * sizeof(int));
-		if (p[i] == 0)
-		{
-			for (j = 0; j <= i, j++)
-				free(p[j]);
-			free(p);
-			return (NULL);
-		}
-	}
-	for (row = 0; row < height; row++)
-	{
-		for (column = 0; column < width; column++)
-			p[row][column] = 0;
-	}
-	return (p);
+/**
+ * **alloc_grid - the function
+ * @width: The first parameter
+ * @height: The second parameter
+ *
+ * Return: return the grid
+ */
+
+int **alloc_grid(int width, int height) {
+    if (width <= 0 || height <= 0) {
+        return NULL;
+    }
+
+    int **grid = (int **)malloc(height * sizeof(int *));
+    if (grid == NULL) {
+        return NULL;
+    }
+
+    for (int i = 0; i < height; i++) {
+        grid[i] = (int *)malloc(width * sizeof(int));
+        if (grid[i] == NULL) {
+            // Free previously allocated memory
+            for (int j = 0; j < i; j++) {
+                free(grid[j]);
+            }
+            free(grid);
+            return NULL;
+        }
+
+        // Initialize elements to 0
+        for (int j = 0; j < width; j++) {
+            grid[i][j] = 0;
+        }
+    }
+
+    return grid;
 }
